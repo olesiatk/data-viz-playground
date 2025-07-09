@@ -1,8 +1,10 @@
 const prefixSelector = require("postcss-prefix-selector");
+const tailwindcss = require("tailwindcss");
+const autoprefixer = require("autoprefixer");
 
 module.exports = {
-  plugins: {
-    [prefixSelector({
+  plugins: [
+    prefixSelector({
       prefix: "#__prefix",
       transform: (prefix, selector, prefixedSelector) => {
         if (selector.startsWith("html") || selector.startsWith("body")) {
@@ -10,8 +12,8 @@ module.exports = {
         }
         return prefixedSelector;
       },
-    })]: {},
-    tailwindcss: {},
-    autoprefixer: {},
-  },
+    }),
+    tailwindcss,
+    autoprefixer,
+  ],
 };
