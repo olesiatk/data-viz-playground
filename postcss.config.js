@@ -1,6 +1,6 @@
-import prefixSelector from 'postcss-prefix-selector';
+const prefixSelector = require('postcss-prefix-selector');
 
-const config = {
+module.exports = {
   plugins: [
     prefixSelector({
       prefix: '#__prefix',
@@ -11,8 +11,7 @@ const config = {
         return prefixedSelector;
       },
     }),
-    '@tailwindcss/postcss',
+    require('tailwindcss'),
+    require('autoprefixer'),
   ],
 };
-
-export default config;
