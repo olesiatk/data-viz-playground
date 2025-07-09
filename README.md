@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Viz Playground 🖼️📊
 
-## Getting Started
+Interactive playground that renders the **same sample data set** with  
+- **D3.js** (SVG bar chart)  
+- **Chart.js 4** (canvas line chart via `react-chartjs-2`)  
+- **Visx** (SVG area chart, semi-transparent)  
 
-First, run the development server:
+…and lets you **edit the data in-browser**. Add or delete rows in the table and watch every chart update in real-time.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+> **Live demo:** <https://YOUR-USERNAME.github.io/data-viz-playground/>  
+> *(replace after you deploy to GitHub Pages – see below)*
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Features
+| Feature | Notes |
+| ------- | ----- |
+| **DataEditor** | Editable table with “＋” to add and “✕” to delete rows |
+| **D3 BarChart** | Custom scales, axes, tooltip |
+| **ChartJS Line** | Built-in hover legend, smooth line |
+| **Visx Area** | Semi-transparent fill (`rgba(59,130,246,0.35)`), animated path |
+| **React 18 + Next 14** | Static export (`output: "export"`) ready for GitHub Pages |
+| **Tailwind + Shadcn** | Only for layout; DataEditor uses plain HTML elements |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Quick start
+https://olesiatk.github.io/data-viz-playground/
