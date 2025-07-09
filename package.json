@@ -6,7 +6,6 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
     "build:static": "npm run build",
     "predeploy": "npm run build:static && touch out/.nojekyll",
     "deploy": "gh-pages -d out"
@@ -21,15 +20,12 @@
     "react-dom": "18.3.1"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4.1.11",
     "@types/d3": "^7.4.3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "autoprefixer": "^10.4.21",
-    "eslint": "^9",
-    "eslint-config-next": "15.3.5",
     "gh-pages": "^6.3.0",
     "tailwindcss": "^4",
     "typescript": "^5"
