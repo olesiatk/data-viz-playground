@@ -1,18 +1,17 @@
-const prefix = '/data-viz-playground';
-
-module.exports = {
+const config = {
   plugins: {
-    'postcss-prefix-selector': {
-      prefix,
+    [prefixSelector({
+      prefix: '/data-viz-playground',
       transform(prefix, selector, prefixedSelector) {
-        // Don't prefix keyframes or global html/body
         if (selector.startsWith('html') || selector.startsWith('body')) {
           return selector;
         }
         return prefixedSelector;
       },
-    },
+    })]: {},
     tailwindcss: {},
     autoprefixer: {},
   },
 };
+
+export default config;
